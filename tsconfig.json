@@ -17,12 +17,27 @@
     "sourceMap": true,
     "baseUrl": ".",
     "noImplicitAny": true,
-    "typeRoots": ["./types/*", "./node_modules/@types"],
-    "types": ["node"],
+    "typeRoots": [
+      "./types/*",
+      "./node_modules/@types"
+    ],
+    "types": [
+      "node",
+      "jest"
+    ],
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": [
+        "src/*"
+      ]
     },
-    "lib": ["esnext", "dom", "dom.iterable", "scripthost", "es6", "es2015"]
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost",
+      "es6",
+      "es2015"
+    ]
   },
   "include": [
     "src/**/*.ts",
@@ -31,6 +46,11 @@
     "tests/**/*.ts",
     "tests/**/*.tsx"
   ],
-  "exclude": ["node_modules"],
-  "files": ["types/shims-tsx.d.ts", "types/shims-vue.d.ts"]
+  "exclude": [
+    "node_modules"
+  ],
+  "files": [
+    "types/shims-tsx.d.ts",
+    "types/shims-vue.d.ts"
+  ]
 }

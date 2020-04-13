@@ -24,6 +24,7 @@
 import Vue from "vue";
 import { Component, Watch } from "vue-property-decorator";
 import RadioButtons from "../components/elements/radio/radio-button.vue";
+import { RADIO_DATA } from "@/models/radio-object";
 
 @Component({
     components: {
@@ -31,24 +32,9 @@ import RadioButtons from "../components/elements/radio/radio-button.vue";
     }
 })
 export default class Radio extends Vue {
-    private radioArray = [
-        {
-            text: 'Female',
-            value: 'female'
-        }, {
-            text: 'Male',
-            value: 'male',
-        }, {
-            text: 'Unknown',
-            value: 'unknown',
-        }, {
-            text: 'Doggy',
-            value: 'doggy',
-            disabled: true,
-        }
-    ];
+    private radioArray = RADIO_DATA;
     private isChecked = '';
-    private selected = this.radioArray[3].value;
+    private selected = this.radioArray[0].value;
 
     private isLoading: boolean = false;
     private isLeft: boolean = true;
@@ -61,12 +47,6 @@ export default class Radio extends Vue {
         console.log('New value is ', { value });
         this.isChecked = value;
         this.selected = value.value;
-    }
-
-    @Watch('onSelect')
-    onRadioButtonSelect(value: any): boolean {
-        console.log({ value });
-        return true;
     }
 }
 </script>
