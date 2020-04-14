@@ -10,7 +10,6 @@
     "testt": "vue-cli-service test:unit"
   },
   "dependencies": {
-    "@types/jest": "^25.2.1",
     "@types/node": "^12.7.3",
     "axios": "^0.19.0",
     "pug": "^2.0.3",
@@ -29,7 +28,7 @@
     "vuex-persistedstate": "^2.5.4"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.19",
+    "@types/jest": "^25.2.1",
     "@vue/cli-plugin-typescript": "^3.11.0",
     "@vue/cli-plugin-unit-jest": "^4.3.1",
     "@vue/cli-service": "^3.11.0",

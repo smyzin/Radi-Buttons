@@ -37,7 +37,7 @@ export default class Radio extends Vue {
     private selected = this.radioArray[0].value;
 
     private isLoading: boolean = false;
-    private isLeft: boolean = true;
+    private isLeft: boolean = false;
     private isInline: boolean = true;
     private get changePosition(): string {
         return this.isLeft ? 'left' : 'right';
