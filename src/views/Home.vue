@@ -30,6 +30,8 @@
                 .caption
                     router-link(to='/radio-buttons') Radio Buttons
                     br
+                    router-link(to='/radio-check-group') Radio-Check Group
+                    br
                     router-link(to='/privacy') {{ $t('home.privacy') }}
 </template>
 

@@ -17,10 +17,44 @@ export const RADIO_DATA: RadioObject[] = [
     }
 ];
 
+export const CHECKBOX_DATA: RadioCheckObject[] = [
+    {
+        text: 'Female',
+        value: 'female',
+        // checked: true,
+    }, {
+        text: 'Male',
+        value: 'male',
+    }, {
+        text: 'Unknown',
+        value: 'unknown',
+    }, {
+        text: 'Doggy',
+        value: 'doggy',
+        disabled: true,
+    }, {
+        text: 'Catty',
+        value: 'catty',
+        disabled: true,
+    }
+];
+
 export interface RadioObject{
     text: string
     value?: string|number
     disabled?: boolean
+}
+
+export interface RadioCheckObject{
+    text: string;
+    value?: string|number;
+    disabled?: boolean;
+    checked?: boolean;
+}
+
+export interface ReturnItemData {
+    data: RadioCheckObject;
+    index: number;
 }
 
 export interface RadioProps{
@@ -37,4 +71,9 @@ export interface IRadioButton extends Vue, Element{
     checkSelected: void;
     onCheckedValue: void;
     selectedValue: string|number;
+}
+
+export interface IRadioCheckButton extends Vue, Element{
+    props: Vue.PropOptions;
+    prepareData: void;
 }
