@@ -33,6 +33,8 @@
                     router-link(to='/radio-check-group') Radio-Check Group
                     br
                     router-link(to='/privacy') {{ $t('home.privacy') }}
+                    br
+                    router-link(to='/loaders') {{ $t('home.loaders') }}
 </template>
 
 <script lang="ts">
